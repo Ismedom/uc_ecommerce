@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    <title>Register</title>
-</head>
-
-<body>
+<x-layouts.layout>
     <h2>Register</h2>
     <form method="POST" action="{{ route('register') }}">
         @csrf
@@ -21,7 +14,4 @@
         <input type="password" name="password_confirmation" required>
         <button type="submit">Register</button>
     </form>
-    <a href="{{ route('login') }}">Already have an account? Login</a>
-</body>
-
-</html>
+</x-layouts.layout>
