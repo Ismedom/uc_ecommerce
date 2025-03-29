@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 
-Route::prefix('auth')->group(function(){
+Route::prefix('auth')->group(function () {
     Route::get('/register', [AuthController::class, 'showRegisterForm'])->name('register');
     Route::post('/register', [AuthController::class, 'register']);
 
@@ -13,6 +13,6 @@ Route::prefix('auth')->group(function(){
     Route::post('/logout', [AuthController::class, 'logout'])->name('logout')->middleware('auth');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware('auth')->name('dashboard');
+Route::get('/', function () {
+    return view('welcome');
+})->middleware(['auth'])->name('dashboard');

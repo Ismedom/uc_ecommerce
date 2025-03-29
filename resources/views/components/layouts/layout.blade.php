@@ -15,8 +15,9 @@
             @vite(['resources/css/app.css', 'resources/js/app.js'])
         @endif
     </head>
-    <body >
-        <p class="bg-green-600">Lorem ipsum dolor sit amet consectetur.</p>
+    <body class="bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white">
+        {{-- @yield('content') --}}
+        {{ $slot }}
         <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
     </body>
 </html>
